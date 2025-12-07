@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      background-color: #4a7ba9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    /* ლოგ ინ კონტეინერუი */
+    .login-container {
+      background-color: #2c4a67;
+      border-radius: 6px;  
+      padding: 32px;  
+      width: 320px;  
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      animation: fadeInScale 0.6s ease forwards;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    @keyframes fadeInScale {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* ჰედინგი */
+    .login-container h2 {
+      color: white;
+      font-weight: 600;
+      font-size: 1.5rem;  
+      margin-bottom:  32px; 
+      text-align: center;
+    }
+
+    /* ფორმა */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px ;  
+    }
+
+    /* ლეიბელი */
+    label {
+      color: white;
+      font-size: 0.875rem;  
+      margin-bottom: -20px; 
+      z-index: 2; 
+      display: block;
+    }
+
+    /* ინპუტები */
+    input[type="email"],
+    input[type="password"] {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid white;
+      color: white;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      outline: none;
+      transition: border-color 0.3s ease;
+      width: 100%;
+    }
+    input::placeholder {
+      color: white;
+      opacity: 0.7;
+    }
+    input:focus {
+      border-bottom-color: white;
+      box-shadow: none;
+    }
+
+    /* ღილაკი */
+    button {
+      background-color: #a9d3df;
+      color: black;
+      border: none;
+      border-radius: 6px; 
+      padding: 0.5rem 0;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover,
+    button:focus {
+      background-color: #8cc5d1;
+      outline: none;
+    }
+
+    /* პარაგრაფი */
+    p {
+      color: white;
+      font-size: 0.875rem;  
+      margin-top: 1rem;
+      text-align: center;
+    }
+    p a {
+      color: #a9d3df;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    p a:hover,
+    p a:focus {
+      color: #8cc5d1;
+      outline: none;
+    }
+
+    /* რენსპონსივი */
+    @media (max-width: 400px) {
+      .login-container {
+        width: 90vw;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="login-container" role="main" aria-label="Login form container">
+    <h2>Please Login</h2>
+    <form>
+      <div class="input-group">
+  <label id="Email" for="email">Email</label>
+  <input type="email" id="email" />
+</div>
+<div class="input-group">
+  <label id="Password" for="password">Password</label>
+  <input type="password" id="password" />
+</div>
+      <button type="submit" id="btn">Login</button>
+    </form>
+    <p>
+      Don't have an account?
+      <a href="#" tabindex="0">Register</a>
+    </p>
+  </div>
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
