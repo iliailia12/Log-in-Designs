@@ -1,0 +1,70 @@
+<!-- 4)შექმენი სფორმა სადააც გექნება სამი ტიპის ინფუთი:ესენია text,password,email ,ეს ინფუთები დაალაგეთ ერთმანეთის ქვემოთ ლამაზად-->
+
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px 30px;
+            border: 1px solid #ddd;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 8px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center;">რეგისტრაციის ფორმა</h2>
+
+    <form action="#" method="post">
+        <!-- Text input -->
+        <label for="username">სახელი:</label>
+        <input type="text" id="username" name="username" placeholder="შეიყვანეთ თქვენი სახელი" required>
+
+        <!-- Email input -->
+        <label for="email">ელ.ფოსტა:</label>
+        <input type="email" id="email" name="email" placeholder="შეიყვანეთ თქვენი ელ.ფოსტა" required>
+
+        <!-- Password input -->
+        <label for="password">პაროლი:</label>
+        <input type="password" id="password" name="password" placeholder="შეიყვანეთ პაროლი" required>
+
+        <button type="submit">გაგზავნა</button>
+    </form>
+
+</body>
+</html>
